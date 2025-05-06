@@ -7,6 +7,9 @@ public class Employee {
     private String department;
     private double payRate;
     private int hoursWorked;
+    private double startTime;// start time
+
+
 
     public Employee(int employeeId, String name, String department, double payRate, int hoursWorked) {
         this.employeeId = employeeId;
@@ -84,7 +87,23 @@ public class Employee {
         return regularPay + overtimePay; // returns calculated total
     }
 
+    //Methods for execrise 2
 
+    //1st: what is the question asking for? :
+
+    //puch in is taking the time they gave you and setting it as the start time
+    public void punchIn(double time){
+        this.startTime = time; // just to store the time
+    }
+    /*
+    punchOut - time difference between the time checking
+    and the time check out to get the hours worked
+    then add this to the hours worked, then you've basically punched out
+    */
+    public void punchOut(double time){
+         double leavetime = time - this.startTime; // time worked
+         hoursWorked += leavetime; // adds how long they worked to total hours
+    }
 
 
 }
