@@ -33,6 +33,5 @@ public class HotelOperationsApp {
         System.out.println("Overtime Hours: " + emp2.getOvertimeHours());
         System.out.println("Total Pay: $" + emp2.getTotalPay());
 */
-
     }
 }
